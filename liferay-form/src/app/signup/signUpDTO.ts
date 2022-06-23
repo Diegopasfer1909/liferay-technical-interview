@@ -1,4 +1,4 @@
-export class SignUpDTO {
+export class SignUpDTO {//Class with optional properties used to tipify the object when saving and retrieving it from the local storage
   name?: string;
   firstSurname?: string;
   secondSurname?: string;

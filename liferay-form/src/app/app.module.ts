@@ -21,6 +21,9 @@ import { APP_BASE_HREF } from '@angular/common';
     ReactiveFormsModule,
     NgxCaptchaModule
   ],
+  exports: [
+    SignupComponent
+  ],
   providers: [{provide: APP_BASE_HREF, useValue: "/"}],
   bootstrap: [AppComponent, SignupComponent]
 })

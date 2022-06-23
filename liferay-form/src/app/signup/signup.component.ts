@@ -19,8 +19,8 @@ export class SignupComponent implements OnInit{
   ) {
   }
   ngOnInit(): void {
-    this.siteKey = "6LcTd48gAAAAAMliqdON1eUazMKZZDPDIrC5yK5o";
-    let data = this.localService.retrieveSignUpDataLocallySaved();
+    this.siteKey = "6LcTd48gAAAAAMliqdON1eUazMKZZDPDIrC5yK5o";//Site key used for captcha identifier
+    let data = this.localService.retrieveSignUpDataLocallySaved();//Retrieve user data in case there's any
     const isEmpty = Object.keys(data).length == 0;
 
     /**
@@ -42,6 +42,7 @@ export class SignupComponent implements OnInit{
    */
   signUp(){
     this.localService.saveSignUpDataLocally(new SignUpDTO(this.formSignUp.value));
+    console.log(this.localService.retrieveSignUpDataLocallySaved());
   }
   /**
    * This function calls LocalService to clean the information about the SignUp
