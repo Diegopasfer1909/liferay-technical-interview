@@ -1,0 +1,22 @@
+<div id="login">
+  <div class="container">
+    <form class="signUp" [formGroup]="formSignUp">
+      <h3>Create Your Account</h3>
+      <p>Just enter your personal information<br>
+        for the Sign Up
+      </p>
+      <input class="w100" type="text" formControlName="name" placeholder="Introduce your name" required/>
+      <input class="w100" type="text" formControlName="firstSurname" placeholder="Introduce your first surname" required/>
+      <input class="w100" type="text" formControlName="secondSurname" placeholder="Introduce your second surname" required/>
+      <input class="w100" type="date" formControlName="birthDate" placeholder="Introduce your birth date" autocomplete='off' required/>
+      <input class="w100" type="email" formControlName="email" placeholder="Introduce your email" autocomplete='off' required/>
+      <ngx-recaptcha2 id="captcha" class="w100 " [siteKey]="this.siteKey" formControlName="recaptcha" required></ngx-recaptcha2>
+      <br>
+      <button class="form-btn sx log-in" type="button" (click)="cleanForm();">Clean form</button>
+      <button class="form-btn dx" [ngClass]="{'buttonsSubmitActivated':formSignUp.valid}" type="submit"
+        [disabled]="!formSignUp.valid" (click)="signUp();">Sign Up
+      </button>
+
+    </form>
+  </div>
+</div>

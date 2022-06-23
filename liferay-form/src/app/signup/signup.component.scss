@@ -1,0 +1,162 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400';
+
+#login{
+  background: linear-gradient(#ace7ff, #caefff, #ffffff);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.container{
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: calc(50% - 350px);
+  left: calc(50% - 200px);
+}
+
+form {
+  position: absolute;
+  text-align: center;
+  background: #fff;
+  width: 400px;
+  height: 700px;
+  border-radius: 5px;
+  padding: 30px 20px 0 20px;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  align-content: center;
+}
+
+h3 {
+  font-family: 'Dosis';
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #4e2f42;
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #4e2f42;
+  margin-bottom: 40px;
+}
+
+p > span {
+  padding-top: 3px;
+  display: block;
+  font-weight: 400;
+  font-size: 9px;
+}
+
+input,
+button{
+  outline: none;
+}
+
+button.form-btn {
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  bottom: 0;
+  border: 0;
+  font-family: 'Dosis';
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button.form-btn.sx {
+  left: 0;
+  border-radius: 0 0 0 5px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  transition:all 0.3s linear;
+}
+
+button.form-btn.sx:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+}
+
+button.form-btn.sx.back {
+  background-color: rgba(0, 0, 0, 0.65);
+  transition:all 0.3s linear;
+}
+
+button.form-btn.sx.back:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+button.form-btn.dx {
+  right: 0;
+  border-radius: 0 0 5px 0;
+  background-color: #aea8a8;
+  color: #fff;
+}
+
+button.form-btn.dx.buttonsSubmitActivated{
+  background-color: #ace7ff;
+}
+
+button.form-btn.dx.buttonsSubmitActivated:hover{
+  background-color: #00acee;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #222870;
+  width: 85%;
+  font-family: 'Roboto';
+  color: black;
+  text-align: center;
+  font-size: 21px;
+  font-weight:100;
+  margin-bottom:25px;
+  position: static;
+}
+
+
+
+::placeholder{
+  background-color: #ace7ff;
+  font-family: 'Roboto';
+  font-weight:100;
+}
+
+.signUp .w100 {
+  width: 100%;
+}
+
+#captcha{
+  position: relative;
+  margin: 0 auto;
+  width: 84%;
+  display: flex;
+}
+
+.buttonsSubmitActivated:hover{
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  60% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
