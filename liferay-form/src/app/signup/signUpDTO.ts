@@ -5,6 +5,7 @@ export class SignUpDTO {//Class with optional properties used to tipify the obje
   birthDate?: string;
   email?: string;
   recaptcha?: any;
+  saveDate?:any;
 
   constructor(object: any) {
     if (object) {
@@ -14,6 +15,7 @@ export class SignUpDTO {//Class with optional properties used to tipify the obje
       this.birthDate = object['birthDate'];
       this.email = object['email'];
       this.recaptcha = object['recaptcha'] !== null;
+      this.saveDate = object['saveDate'];
     }
   }
 }

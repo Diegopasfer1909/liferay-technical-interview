@@ -5,9 +5,9 @@
       <p>Just enter your personal information<br>
         for the Sign Up
       </p>
-      <input class="w100" type="text" formControlName="name" placeholder="Introduce your name" required/>
-      <input class="w100" type="text" formControlName="firstSurname" placeholder="Introduce your first surname" required/>
-      <input class="w100" type="text" formControlName="secondSurname" placeholder="Introduce your second surname" required/>
+      <input class="w100" type="text" maxlength="20" formControlName="name" placeholder="Introduce your name" required/>
+      <input class="w100" type="text" maxlength="20" formControlName="firstSurname" placeholder="Introduce your first surname" required/>
+      <input class="w100" type="text" maxlength="20" formControlName="secondSurname" placeholder="Introduce your second surname" required/>
       <input class="w100" type="date" formControlName="birthDate" placeholder="Introduce your birth date" autocomplete='off' required/>
       <input class="w100" type="email" formControlName="email" placeholder="Introduce your email" autocomplete='off' required/>
       <ngx-recaptcha2 id="captcha" class="w100 " [siteKey]="this.siteKey" formControlName="recaptcha" required></ngx-recaptcha2>

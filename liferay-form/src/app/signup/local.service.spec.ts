@@ -11,7 +11,8 @@ describe('LocalService', () => {
     secondSurname: "Apellido2",
     birthDate: "1999-07-04",
     email: "ejemplo@gmail.com",
-    recaptcha: true
+    recaptcha: true,
+    saveDate: "2022-06-24T10:13:00.523Z"
   });
 
   beforeEach(() => {

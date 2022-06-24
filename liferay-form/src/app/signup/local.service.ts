@@ -14,6 +14,7 @@ export class LocalService {
    * Function that saves the Sign Up information in the local storage
    */
   saveSignUpDataLocally(signUpData:SignUpDTO){
+    signUpData.saveDate = new Date();
     localStorage.setItem("SignUpData",JSON.stringify(signUpData));
   }
 
@@ -33,3 +34,4 @@ export class LocalService {
     localStorage.removeItem("SignUpData");
   }
 }
+
